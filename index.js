@@ -40,6 +40,6 @@ app.use('/shopefi/users/',userRouter);
 const orderRouter=require('./routes/orders.routes');
 app.use('/shopefi/orders/',orderRouter);
 
-app.listen(process.env.PORT,process.env.HOST,()=>{
-    console.log(`Server Started at http://${process.env.HOST}:${process.env.PORT}`);
+app.listen(process.env.PORT,()=>{
+    console.log(`Server Started at port ${process.env.PORT}`);
 })
