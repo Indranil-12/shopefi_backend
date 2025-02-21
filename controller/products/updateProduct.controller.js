@@ -6,7 +6,7 @@ let ImagePath = '';
 const updateProduct = async (req, res) => {
     if (req.method == 'PUT' || req.method == 'PATCH') {
         if (req.file) {
-            ImagePath = baseurl + "/uploads/" + req.file.filename;
+            ImagePath = "uploads/" + req.file.filename;
         } else {
             try {
                 const productInfo = await productModel.findOne({ "product_id": req.params.pid }).exec();
